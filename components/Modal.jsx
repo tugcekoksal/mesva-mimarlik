@@ -8,6 +8,7 @@ const Modal = ({ isOpen, onClose, project }) => {
   const nextImageIndex = (currentIndex + 1) % project.images.length;
 
   if (!isOpen) return null;
+  if (!project || !isOpen) return null;
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % project.images.length);
