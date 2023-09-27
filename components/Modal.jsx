@@ -5,10 +5,8 @@ import Head from "next/head";
 
 const Modal = ({ isOpen, onClose, project }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const nextImageIndex = (currentIndex + 1) % project.images.length;
 
-  if (!isOpen) return null;
-  if (!project || !isOpen) return null;
+  if (!project || !isOpen || !project.images) return null;
 
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % project.images.length);
@@ -38,8 +36,15 @@ const Modal = ({ isOpen, onClose, project }) => {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href={project.images[nextImageIndex]} />
+        {project?.images && currentIndex + 1 < project.images.length && (
+          <link
+            rel="preload"
+            as="image"
+            href={project.images[currentIndex + 1]}
+          />
+        )}
       </Head>
+
       <div
         onClick={handleModalClick}
         className="fixed inset-0 bg-gray-500 bg-opacity-80 w-full h-full flex items-center justify-center z-50 transition-opacity"
