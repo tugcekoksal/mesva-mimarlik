@@ -19,13 +19,19 @@ const Modal = ({ isOpen, onClose, project }) => {
   };
   const handleModalClick = (e) => {
     e.stopPropagation();
+    setCurrentIndex(0);
     onClose();
+    console.log(currentIndex);
   };
 
   const handleContentClick = (e) => {
     e.stopPropagation();
   };
-
+  const handleClose = () => {
+    setCurrentIndex(0);
+    onClose();
+    console.log(currentIndex);
+  };
   return (
     <div
       onClick={handleModalClick}
@@ -35,17 +41,20 @@ const Modal = ({ isOpen, onClose, project }) => {
         onClick={handleContentClick}
         className="bg-white w-[1200px] h-[600px] rounded-lg p-4"
       >
-        <button className="text-black font-bold" onClick={onClose}>
+        <button className="text-black font-bold" onClick={handleClose}>
           Kapat
         </button>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mt-6">
           {" "}
-          <div className="relative">
+          <div className="relative w-[700px] h-[500px]">
             <Image
               src={project.images[currentIndex]}
               alt={project.name}
-              width={700}
-              height={350}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,..."
             />
             <button
               className="absolute text-4xl text-white text-bold top-1/2 left-2 transform -translate-y-1/2"

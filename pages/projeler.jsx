@@ -12,6 +12,7 @@ const projeler = () => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold py-14 text-center">Projelerimiz</h1>

@@ -46,7 +46,9 @@ const Slider = ({ slides }) => {
                   height={"600"}
                   objectFit="cover"
                   src={slide.image}
-                  alt=""
+                  alt={index}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,..."
                 />
               )}
               <FaArrowCircleRight

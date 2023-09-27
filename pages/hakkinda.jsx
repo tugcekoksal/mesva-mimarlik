@@ -1,18 +1,44 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NelerYapiyoruz from "@/components/NelerYapiyoruzCard";
+import React, { useEffect, useRef, useState } from "react";
 import { FaBuilding, FaPaintBrush, FaDraftingCompass } from "react-icons/fa";
 
 const hakkinda = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (buttonRef.current) {
+      observer.observe(buttonRef.current);
+    }
+
+    return () => {
+      if (buttonRef.current) {
+        observer.unobserve(buttonRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className=" mx-auto  ">
-      <div className="container mx-auto flex justify-center items-center p-[200px] ">
+      <div className="mt-[200px] mb-[100px] flex flex-wrap sm:w-full justify-center items-center p-10 ">
         <img
           src={"construction.jpg"}
-          className="w-60 h-60 shadow-lg rounded-full object-cover mr-[8rem]"
+          className="w-60 h-60 shadow-lg rounded-full object-cover md:mr-[8rem] mb-[75px] xl:mb-0 "
         />
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center max-w-[800px]">
           <h1 className="font-light  mb-2">BIZI TANIYIN</h1>
           <h2 className=" font-bold text-4xl mb-6 ">
             Sadece Binalar Değil, Yaşam Alanları Yaratıyoruz.
@@ -31,8 +57,8 @@ const hakkinda = () => {
           </p>
         </div>
       </div>
-      <div className="relative flex items-center justify-center  h-[500px]  bg-center bg-cover hakkinda-img mb-[250px]">
-        <div className="absolute top-60 container mx-auto  px-[8rem] grid grid-cols-1 md:grid-cols-3 gap-6  ">
+      <div className="flex items-center justify-center  lg:h-[500px]  bg-center bg-cover hakkinda-img mb-[100px] md:mb-[250px]">
+        <div className=" lg:mt-[400px] container mx-auto p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
           {" "}
           <NelerYapiyoruz
             Icon={FaBuilding}
@@ -55,9 +81,14 @@ const hakkinda = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center pb-20">
+      <div className="flex justify-center pb-10 ">
         <Link href={"/iletisim"}>
-          <button className=" border border-black shadow py-4 px-10 rounded  font-semibold hover:bg-black hover:text-white duration-300">
+          <button
+            ref={buttonRef}
+            className={`border border-black shadow py-4 px-10 rounded font-semibold hover:bg-black hover:text-white transform transition-all duration-500  ${
+              isVisible ? "translate-y-[-50px]" : ""
+            }`}
+          >
             BİRLİKTE ÇALIŞALIM
           </button>
         </Link>
