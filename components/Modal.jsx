@@ -54,7 +54,7 @@ const Modal = ({ isOpen, onClose, project }) => {
             {" "}
             <div className="relative w-[700px] h-[500px]">
               <Image
-                src={project.images[currentIndex]}
+                src={project?.images?.[currentIndex]}
                 alt={project.name}
                 layout="fill"
                 objectFit="cover"
