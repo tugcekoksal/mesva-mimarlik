@@ -44,7 +44,7 @@ const iletisim = () => {
         </p>
       </div>
       <div className="p-10 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
           <OfisCard
             city={"ÇANAKKALE"}
             adres={"Camikebir mahallesi Gazi Hasan Paşa caddesi No:1A"}
@@ -78,7 +78,7 @@ const iletisim = () => {
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
           MESAJINIZI BIRAKABİLİRSİNİZ
         </h1>
-        <div className="w-[600px]">
+        <div className="w-[400px] md:w-[600px]">
           {" "}
           <IletisimFormu />
         </div>

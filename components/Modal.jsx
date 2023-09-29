@@ -51,14 +51,17 @@ const Modal = ({ isOpen, onClose, project }) => {
       >
         <div
           onClick={handleContentClick}
-          className="bg-white w-[1200px] h-[600px] rounded-lg p-4"
+          className="bg-white w-full md:w-[800px] lg:w-[1200px] h-auto rounded-lg p-4"
         >
-          <button className="text-black font-bold" onClick={handleClose}>
+          <button
+            className="text-black font-bold text-lg md:text-xl"
+            onClick={handleClose}
+          >
             Kapat
           </button>
-          <div className="flex flex-wrap mt-6">
+          <div className="flex flex-col md:flex-row my-6 mx-4">
             {" "}
-            <div className="relative w-[700px] h-[500px]">
+            <div className="relative w-full md:w-[800px] h-[300px] md:h-[500px]">
               <Image
                 src={project?.images?.[currentIndex]}
                 alt={project.name}

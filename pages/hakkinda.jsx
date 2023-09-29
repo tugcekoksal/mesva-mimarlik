@@ -33,7 +33,7 @@ const hakkinda = () => {
 
   return (
     <div className=" mx-auto  ">
-      <div className="mt-[200px] mb-[100px] flex flex-wrap sm:w-full justify-center items-center p-10 ">
+      <div className="mt-[150px] mb-[100px] flex flex-wrap sm:w-full justify-center items-center p-10 ">
         <img
           src={"construction.jpg"}
           className="w-60 h-60 shadow-lg rounded-full object-cover md:mr-[8rem] mb-[75px] xl:mb-0 "

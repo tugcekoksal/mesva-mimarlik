@@ -5,8 +5,8 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const OfisCard = ({ city, url, adres, telefon, ilce, harita }) => {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="relative w-[350px] h-[200px] border  overflow-hidden shadow-md hover:shadow-lg transition duration-300 group ">
+    <div className="flex flex-col justify-center items-center w-[300px]  ">
+      <div className="relative w-full h-[200px] border  overflow-hidden shadow-md hover:shadow-lg transition duration-300 group ">
         <Image
           src={url}
           alt={"konya"}
@@ -23,9 +23,9 @@ const OfisCard = ({ city, url, adres, telefon, ilce, harita }) => {
           </Link>
         </div>
       </div>
-      <div className=" p-6 w-full sm:w-[350px] text-gray-800 shadow-md  ">
+      <div className=" p-6 w-full sm:w-[300px] text-gray-800 shadow-md  ">
         <h2 className="text-xl font-bold mb-6 text-left">{city} OFIS</h2>
-        <p className="text-base leading-relaxed mb-4 text-light">
+        <p className="text-base leading-relaxed mb-4 text-light h-[100px]">
           <FaMapMarkerAlt className="inline mr-2" />
           {adres}
           <br /> {ilce}
