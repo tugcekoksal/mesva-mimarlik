@@ -6,10 +6,23 @@ function IletisimFormu() {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Burada form verilerini sunucuya gönderme işlemlerini yapabilirsiniz.
-    console.log(formData);
+    try {
+      const result = await emailjs.sendForm(
+        "service_pzj24ye",
+        "template_p3xtgqh",
+        e.target,
+        "ajNw8hHBtWDc-5DQT"
+      );
+      if (result.text === "OK") {
+        console.log("E-posta başarıyla gönderildi.");
+      } else {
+        console.error("E-posta gönderilirken bir hata oluştu.");
+      }
+    } catch (error) {
+      console.error("E-posta gönderilirken bir hata oluştu:", error);
+    }
   };
 
   const handleChange = (e) => {
@@ -26,7 +39,7 @@ function IletisimFormu() {
         <input
           type="text"
           id="name"
-          name="name"
+          name="user_name"
           value={formData.name}
           onChange={handleChange}
           className="p-2 border rounded-md"
@@ -39,7 +52,7 @@ function IletisimFormu() {
         <input
           type="email"
           id="email"
-          name="email"
+          name="user_email"
           value={formData.email}
           onChange={handleChange}
           className="p-2 border rounded-md"
@@ -51,7 +64,7 @@ function IletisimFormu() {
         </label>
         <textarea
           id="message"
-          name="message"
+          name="user_message"
           value={formData.message}
           onChange={handleChange}
           className="p-2 border rounded-md"
