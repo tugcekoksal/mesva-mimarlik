@@ -128,7 +128,7 @@ export const projects = [
     name: "Erenkoy Eğitim ve Araştırma Hastanesi",
     isveren: "Erenköy Ruh ve Sinir Hastalıkları Hastanesi",
     konum: "Erenköy, İstanbul",
-    olcek: "51ç500m²",
+    olcek: "51,500m²",
     tarih: 2021,
     tip: "Sağlık",
     durum: "Yarışma",

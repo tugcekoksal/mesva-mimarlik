@@ -51,17 +51,17 @@ const Modal = ({ isOpen, onClose, project }) => {
       >
         <div
           onClick={handleContentClick}
-          className="bg-white w-full md:w-[800px] lg:w-[1200px] h-auto rounded-lg p-4"
+          className="relative bg-white w-full md:w-[900px] lg:w-[1200px] h-auto rounded-lg p-4"
         >
           <button
-            className="text-black font-bold text-lg md:text-xl"
+            className="absolute right-3 top-3 text-black  text-lg md:text-xl"
             onClick={handleClose}
           >
-            Kapat
+            X
           </button>
           <div className="flex flex-col md:flex-row my-6 mx-4">
             {" "}
-            <div className="relative w-full md:w-[800px] h-[300px] md:h-[500px]">
+            <div className="relative w-full md:w-[900px] h-[300px] md:h-[500px]">
               <Image
                 src={project?.images?.[currentIndex]}
                 alt={project.name}
@@ -84,15 +84,15 @@ const Modal = ({ isOpen, onClose, project }) => {
                 {">"}
               </button>
             </div>
-            <div className="ml-8">
-              <h1 className="font-bold text-xl mb-4"> {project.name}</h1>
-              <p>İsveren : {project.isveren}</p>
-              <p>Konum : {project.konum}</p>
-              <p>Ölçek : {project.olcek}</p>
-              <p>Tarih : {project.tarih}</p>
-              <p>Tip : {project.tip}</p>
-              <p>Durum : {project.durum}</p>
-              <p>Ekip : {project.ekip}</p>
+            <div className="ml-8 ">
+              <h1 className="font-bold text-xl mb-4 mt-4"> {project.name}</h1>
+              <p className="mb-2">İsveren : {project.isveren}</p>
+              <p className="mb-2">Konum : {project.konum}</p>
+              <p className="mb-2">Ölçek : {project.olcek}</p>
+              <p className="mb-2">Tarih : {project.tarih}</p>
+              <p className="mb-2">Tip : {project.tip}</p>
+              <p className="mb-2">Durum : {project.durum}</p>
+              <p className="mb-2">Ekip : {project.ekip}</p>
             </div>
           </div>
         </div>

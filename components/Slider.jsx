@@ -6,53 +6,61 @@ import {
   FaArrowCircleRight,
 } from "react-icons/fa";
 
-const Slider = ({ slides }) => {
-  const [current, setCurrent] = useState(0);
-  const length = slides.length;
+const Slider = ({ projects }) => {
+  const [currentProject, setCurrentProject] = useState(0);
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
-  const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrentProject(
+      currentProject === projects.length - 1 ? 0 : currentProject + 1
+    );
   };
 
-  if (!Array.isArray(slides) || slides.length === 0) {
+  const prevSlide = () => {
+    setCurrentProject(
+      currentProject === 0 ? projects.length - 1 : currentProject - 1
+    );
+  };
+
+  if (!Array.isArray(projects) || projects.length === 0) {
     return null;
   }
 
   return (
-    <div id="projeler" className="max-w-[1240px] mx-auto">
+    <div id="projeler" className="max-w-[1240px]  mx-auto">
       <h1 className="text-2xl font-bold text-center p-4">Galeri</h1>
       <div className="relative flex justify-center p-4">
-        {slides.map((slide, index) => {
+        {projects.map((project, index) => {
           return (
             <div
               key={index}
               className={
-                index === current
-                  ? "opacity-[1] ease-in duration-1000"
+                index === currentProject
+                  ? "opacity-[1] ease-in duration-1000 w-full h-auto overflow-hidden "
                   : "opacity-0"
               }
             >
               <FaArrowCircleLeft
                 onClick={prevSlide}
-                size={50}
-                className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]"
+                size={30}
+                className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
               />
-              {index === current && (
-                <Image
-                  width="1440"
-                  height={"600"}
-                  objectFit="cover"
-                  src={slide.image}
-                  alt={index}
-                />
+              {index === currentProject && (
+                <div className="w-full h-full relative">
+                  <Image
+                    layout="responsive"
+                    width={1400}
+                    height={800}
+                    objectFit="cover"
+                    src={project.images[0]} // Displaying only the first image of each project
+                    alt={index}
+                    objectPosition="center"
+                  />
+                </div>
               )}
               <FaArrowCircleRight
                 onClick={nextSlide}
-                size={50}
-                className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]"
+                size={30}
+                className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
               />
             </div>
           );
