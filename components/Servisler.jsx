@@ -5,6 +5,8 @@ const Servisler = () => {
   const [visible2, setIsVisible2] = useState(false);
   const [visible3, setIsVisible3] = useState(false);
 
+  const sizeIcon = { fontSize: "3rem" };
+
   const handleToggle1 = () => {
     setIsVisible1(!visible1);
     setIsVisible2(false);
@@ -31,7 +33,7 @@ const Servisler = () => {
           }`}
           onClick={handleToggle1}
         >
-          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto   ">
+          <span class="material-symbols-outlined  mb-4 mx-auto   ">
             design_services
           </span>
           <h2 className="text-sm"> RUHSAT VE UYGULAMA PROJELERİ</h2>
@@ -42,7 +44,10 @@ const Servisler = () => {
           }`}
           onClick={handleToggle2}
         >
-          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto  ">
+          <span
+            class="material-symbols-outlined text-[4rem] mb-4 mx-auto  "
+            style={sizeIcon}
+          >
             stylus_note
           </span>
           <h2 className="text-sm">İÇ MİMARLIK</h2>
@@ -53,9 +58,7 @@ const Servisler = () => {
           }`}
           onClick={handleToggle3}
         >
-          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto ">
-            villa
-          </span>
+          <span class="material-symbols-outlined  mb-4 mx-auto ">villa</span>
           <h2 className="text-sm">KONSEPT TASARIM PROJELERİ</h2>
         </div>
       </div>
