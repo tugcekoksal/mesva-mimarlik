@@ -1,14 +1,9 @@
-import { icon } from "leaflet";
 import { useState } from "react";
 
 const Servisler = () => {
   const [visible1, setIsVisible1] = useState(true);
   const [visible2, setIsVisible2] = useState(false);
   const [visible3, setIsVisible3] = useState(false);
-
-  const iconSizes = {
-    fontSize: "3rem",
-  };
 
   const handleToggle1 = () => {
     setIsVisible1(!visible1);
@@ -36,10 +31,7 @@ const Servisler = () => {
           }`}
           onClick={handleToggle1}
         >
-          <span
-            class="material-symbols-outlined mb-4 mx-auto "
-            style={iconSizes}
-          >
+          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto   ">
             design_services
           </span>
           <h2 className="text-sm"> RUHSAT VE UYGULAMA PROJELERİ</h2>
@@ -50,10 +42,7 @@ const Servisler = () => {
           }`}
           onClick={handleToggle2}
         >
-          <span
-            class="material-symbols-outlined  mb-4 mx-auto"
-            style={iconSizes}
-          >
+          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto  ">
             stylus_note
           </span>
           <h2 className="text-sm">İÇ MİMARLIK</h2>
@@ -64,10 +53,7 @@ const Servisler = () => {
           }`}
           onClick={handleToggle3}
         >
-          <span
-            class="material-symbols-outlined  mb-4 mx-auto "
-            style={iconSizes}
-          >
+          <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto ">
             villa
           </span>
           <h2 className="text-sm">KONSEPT TASARIM PROJELERİ</h2>
