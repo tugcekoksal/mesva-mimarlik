@@ -33,7 +33,10 @@ const Servisler = () => {
           }`}
           onClick={handleToggle1}
         >
-          <span class="material-symbols-outlined  mb-4 mx-auto   ">
+          <span
+            class="material-symbols-outlined  mb-4 mx-auto   "
+            style={sizeIcon}
+          >
             design_services
           </span>
           <h2 className="text-sm"> RUHSAT VE UYGULAMA PROJELERİ</h2>
@@ -58,7 +61,12 @@ const Servisler = () => {
           }`}
           onClick={handleToggle3}
         >
-          <span class="material-symbols-outlined  mb-4 mx-auto ">villa</span>
+          <span
+            class="material-symbols-outlined  mb-4 mx-auto "
+            style={sizeIcon}
+          >
+            villa
+          </span>
           <h2 className="text-sm">KONSEPT TASARIM PROJELERİ</h2>
         </div>
       </div>
