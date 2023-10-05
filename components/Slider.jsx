@@ -41,8 +41,8 @@ const Slider = ({ projects }) => {
             >
               <FaArrowCircleLeft
                 onClick={prevSlide}
-                size={30}
-                className="absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
+                size={20}
+                className="absolute top-[50%] left-[30px] text-white/90 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
               />
               {index === currentProject && (
                 <div className="w-full h-full relative">
@@ -55,12 +55,18 @@ const Slider = ({ projects }) => {
                     alt={index}
                     objectPosition="center"
                   />
+                  <div className="absolute bottom-[10%] text-center left-0 w-full p-4 bg-black/60">
+                    <h3 className="text-white">{project.name}</h3>{" "}
+                    <button className="mt-2 px-4 py-2 rounded-md bg-white text-black hover:font-bold">
+                      Projeye Git
+                    </button>
+                  </div>
                 </div>
               )}
               <FaArrowCircleRight
                 onClick={nextSlide}
-                size={30}
-                className="absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
+                size={20}
+                className="absolute top-[50%] right-[30px] text-white/90 cursor-pointer select-none z-[2] md:w-8 md:h-8 lg:w-12 lg:h-12"
               />
             </div>
           );

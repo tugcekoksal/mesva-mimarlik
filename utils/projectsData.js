@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: 1,
-    name: "Ö.Y Evi",
+    name: "Ö.Y EVİ",
     isveren: "Ö.Y ",
     konum: "Meram, Konya",
     olcek: "200m²",
@@ -30,7 +30,7 @@ export const projects = [
   },
   {
     id: 2,
-    name: "Gökçeada Konsept Proje",
+    name: "GÖKÇEADA KONSEPT PROJE",
     isveren: "Erdoğan İnşaat",
     konum: "Gökçeada, Çanakkale",
     olcek: "1200m²",
@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Seçer Yapı Konut Projesi",
+    name: "SEÇER YAPI KONUT PROJESİ",
     isveren: "Seçer Yapı",
     konum: "Gelibolu, Çanakkale",
     olcek: "1600m²",
@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: "İzmir Müstakil Ev",
+    name: "İZMİR MÜSTAKİL EV",
     isveren: "Sahra Şehircilik",
     konum: "Foça, İzmir",
     olcek: "2000m²",
@@ -105,7 +105,7 @@ export const projects = [
   },
   {
     id: 5,
-    name: "Konya Müstakil Ev",
+    name: "KONYA MÜSTAKİL EV",
     isveren: "Fatih Dağ",
     konum: "Kadınhanı,Konya",
     olcek: "400m²",
@@ -125,7 +125,7 @@ export const projects = [
   },
   {
     id: 6,
-    name: "Erenkoy Eğitim ve Araştırma Hastanesi",
+    name: "ERENKÖY EĞİTİM VE ARAŞTIRMA HASTANESİ",
     isveren: "Erenköy Ruh ve Sinir Hastalıkları Hastanesi",
     konum: "Erenköy, İstanbul",
     olcek: "51,500m²",
@@ -145,7 +145,7 @@ export const projects = [
   },
   {
     id: 7,
-    name: "Konut + Ticaret Projesi",
+    name: "KONUT + TİCARET PROJESİ ",
     isveren: "Seçer Yapı",
     konum: "Gelibolu, Çanakkale",
     olcek: "1600m²",

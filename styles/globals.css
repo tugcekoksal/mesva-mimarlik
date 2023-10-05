@@ -22,3 +22,18 @@ html {
 .text-light-md {
   @apply text-gray-500;
 }
+/* CSS dosyanızda veya <style> etiketi içinde tanımlayabilirsiniz */
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 1s ease forwards;
+}

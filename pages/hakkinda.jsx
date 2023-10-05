@@ -43,6 +43,7 @@ const hakkinda = () => {
           <h2 className=" font-bold text-4xl mb-6 ">
             Sadece Binalar Değil, Yaşam Alanları Yaratıyoruz.
           </h2>
+
           <p className="container leading-relaxed  font-light">
             <strong>Mesva Mimarlık ve Tasarım</strong> , 2021 yılında mimar
             Sinem Çeri tarafından Çanakkale'de kurulmuştur. 2023 yılında bir
@@ -61,22 +62,22 @@ const hakkinda = () => {
         <div className=" lg:mt-[400px] container mx-auto p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
           {" "}
           <NelerYapiyoruz
-            Icon={FaBuilding}
-            title={" Ruhsat ve Uygulama Projeleri"}
+            icon={"design_services"}
+            title={" RUHSAT VE UYGULAMA PROJELERİ"}
             description={`Deneyimli ekibimizle projenizin başından sonuna kadar size rehberlik
             ediyor, en iyi çözümleri sunuyoruz. Mevzuatlara uygun hazırladığımız
             projelerle, inşaat sürecinizin verimli ilerlemesini hedefliyoruz.`}
           />
           <NelerYapiyoruz
-            Icon={FaPaintBrush}
-            title={" İç Mimarlık"}
+            icon={"stylus_note "}
+            title={" İÇ MİMARLIK"}
             description={` İç mekanların estetik ve fonksiyonelliğini ön planda tutarak, yaşam
               alanlarınızı dönüştürüyoruz. Her bir detayı özenle planlayarak,
               mekanın ruhunu yansıtan tasarımlar oluşturuyoruz. `}
           />
           <NelerYapiyoruz
-            Icon={FaBuilding}
-            title={"  Konsept Tasarım Projeleri"}
+            icon={"villa"}
+            title={" KONSEPT TASARIM PROJELERİ"}
             description={`Konsept tasarım projelerimizle, markanızın veya yaşam alanınızın özgün bir kimliğe kavuşmasını sağlıyoruz. Başlangıçtan sona bütüncül bir yaklaşım ile yenilikçi ve etkileyici konseptler oluşturuyoruz`}
           />
         </div>
