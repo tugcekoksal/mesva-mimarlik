@@ -1,6 +1,6 @@
 function NelerYapiyoruz({ icon, title, description }) {
   const iconSize = {
-    fontSize: "4rem",
+    fontSize: "3rem",
   };
   return (
     <div className="card px-2 md:px-[50px] py-10 border rounded-lg shadow-lg text-center bg-white ">
