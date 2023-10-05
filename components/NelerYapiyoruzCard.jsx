@@ -1,7 +1,7 @@
 function NelerYapiyoruz({ icon, title, description }) {
   return (
     <div className="card px-2 md:px-[50px] py-10 border rounded-lg shadow-lg text-center bg-white ">
-      <span class="material-symbols-outlined text-[4rem] mb-4 mx-auto ">
+      <span class="material-symbols-outlined text-[8rem] mb-4 mx-auto ">
         {icon}
       </span>
 
