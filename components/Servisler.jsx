@@ -23,7 +23,7 @@ const Servisler = () => {
   return (
     <div>
       <h1 className="text-xl font-semibold text-center py-10">SERVİSLERİMİZ</h1>
-      <div className="flex justify-center px-[18rem] py-10 ">
+      <div className="flex justify-center md:px-[18rem] py-10 ">
         {" "}
         <div
           className={`flex-1 text-center px-8 py-2 border-r cursor-pointer ${
@@ -60,21 +60,21 @@ const Servisler = () => {
         </div>
       </div>
       {visible1 && (
-        <div className="p-10 mx-[15rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
           <p className="text-center leading-loose">
             Mimari Vizyonunuzu Hayata Geçiriyoruz: Ruhsat ve Uygulama
             Projelerinizin Anahtar Teslim Çözüm Sağlayıcısı Olarak, Sizlere
             Tasarımın İlk Çiziminden İnşaatın Son Aşamasına Kadar Tüm Süreçlerde
             Profesyonel Destek Sunuyoruz. Deneyimimiz ve Tutkumuzla,
-            Projelerinizin Her Detayını Kusursuzca İnşa Ediyoruz.{" "}
+            Projelerinizin Her Detayını Kusursuzca İnşa Ediyoruz.
             <span className="font-semibold">
-              <a href="/hakkinda">Devamını gör...</a>
+              <a href="/hakkinda"> Devamını gör...</a>
             </span>
           </p>
         </div>
       )}
       {visible2 && (
-        <div className="p-10 mx-[15rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
           <p className="text-center leading-loose">
             Mimari vizyonu gerçeğe dönüştürme konusundaki tutkumuzla, iç
             mekanlarınızı hayal ettiğinizden daha fazla özgün, işlevsel ve
@@ -86,7 +86,7 @@ const Servisler = () => {
         </div>
       )}
       {visible3 && (
-        <div className="p-10 mx-[15rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
           <p className="text-center leading-loose">
             Her projeye özel yaklaşıyor ve müşterilerimizin ihtiyaçlarını ve
             hayallerini en üst düzeyde karşılamak için çalışıyoruz.
