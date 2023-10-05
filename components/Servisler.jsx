@@ -6,7 +6,7 @@ const Servisler = () => {
   const [visible2, setIsVisible2] = useState(false);
   const [visible3, setIsVisible3] = useState(false);
 
-  const iconSize = {
+  const iconSizes = {
     fontSize: "3rem",
   };
 
@@ -38,7 +38,7 @@ const Servisler = () => {
         >
           <span
             class="material-symbols-outlined mb-4 mx-auto "
-            style={iconSize}
+            style={iconSizes}
           >
             design_services
           </span>
@@ -52,7 +52,7 @@ const Servisler = () => {
         >
           <span
             class="material-symbols-outlined  mb-4 mx-auto"
-            style={iconSize}
+            style={iconSizes}
           >
             stylus_note
           </span>
@@ -66,7 +66,7 @@ const Servisler = () => {
         >
           <span
             class="material-symbols-outlined  mb-4 mx-auto "
-            style={iconSize}
+            style={iconSizes}
           >
             villa
           </span>
