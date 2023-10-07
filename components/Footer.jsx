@@ -1,8 +1,9 @@
 import Link from "next/link";
+import ScrollToTop from "./ScrollToUp";
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-6">
+    <footer className=" bg-gray-800 text-white py-6">
       <div className="container mx-auto text-center">
         <h1 className="text-xl font-bold mb-2">MesVA</h1>
         <p className="mb-2">© 2023 Mesva. Tüm hakları saklıdır.</p>

@@ -6,7 +6,7 @@ const Hero = ({ heading, message }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
-    // Sayfa yüklendiğinde 1 saniye sonra yazıyı göster
+
     const timeout = setTimeout(() => {
       setShowMessage(true);
     }, 400);

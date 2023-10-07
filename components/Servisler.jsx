@@ -24,7 +24,9 @@ const Servisler = () => {
   };
   return (
     <div>
-      <h1 className="text-xl font-semibold text-center py-10">SERVİSLERİMİZ</h1>
+      <h1 className="text-xl font-semibold text-center py-10 ">
+        SERVİSLERİMİZ
+      </h1>
       <div className="flex justify-center md:px-[18rem] py-10 ">
         {" "}
         <div
@@ -71,7 +73,7 @@ const Servisler = () => {
         </div>
       </div>
       {visible1 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
           <p className="text-center leading-loose">
             Mimari Vizyonunuzu Hayata Geçiriyoruz: Ruhsat ve Uygulama
             Projelerinizin Anahtar Teslim Çözüm Sağlayıcısı Olarak, Sizlere

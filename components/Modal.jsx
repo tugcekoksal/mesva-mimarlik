@@ -1,10 +1,27 @@
 // components/Modal.js
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 
 const Modal = ({ isOpen, onClose, project }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") {
+        nextImage();
+      } else if (e.key === "ArrowLeft") {
+        prevImage();
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, currentIndex]);
 
   if (!project || !isOpen || !project.images) return null;
 
@@ -33,6 +50,7 @@ const Modal = ({ isOpen, onClose, project }) => {
     onClose();
     console.log(currentIndex);
   };
+
   return (
     <>
       <Head>
@@ -51,7 +69,7 @@ const Modal = ({ isOpen, onClose, project }) => {
       >
         <div
           onClick={handleContentClick}
-          className="relative bg-white w-full md:w-[900px] lg:w-[1200px] h-auto rounded-lg p-4"
+          className="relative bg-white w-full md:w-[900px] lg:w-[1300px] h-auto rounded-lg p-4"
         >
           <button
             className="absolute right-3 top-3 text-black  text-lg md:text-xl"
@@ -61,7 +79,7 @@ const Modal = ({ isOpen, onClose, project }) => {
           </button>
           <div className="flex flex-col md:flex-row my-6 mx-4">
             {" "}
-            <div className="relative w-full md:w-[900px] h-[300px] md:h-[500px]">
+            <div className="relative w-full md:w-[900px] h-[300px] md:h-[650px]">
               <Image
                 src={project?.images?.[currentIndex]}
                 alt={project.name}
@@ -72,13 +90,13 @@ const Modal = ({ isOpen, onClose, project }) => {
                 blurDataURL="data:image/png;base64,..."
               />
               <button
-                className="absolute text-4xl text-white text-bold top-1/2 left-2 transform -translate-y-1/2"
+                className="absolute text-4xl text-white hover:text-5xl top-1/2 left-2 transform -translate-y-1/2"
                 onClick={prevImage}
               >
                 {"<"}
               </button>
               <button
-                className="text-4xl absolute text-bold text-white top-1/2 right-2 transform -translate-y-1/2"
+                className="text-4xl absolute hover:text-5xl text-white top-1/2 right-2 transform -translate-y-1/2"
                 onClick={nextImage}
               >
                 {">"}

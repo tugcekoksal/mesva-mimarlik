@@ -37,3 +37,40 @@ html {
 .animate-slide-down {
   animation: slide-down 1s ease forwards;
 }
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation on hover */
+.group-hover .animate-slide-left {
+  animation: slide-left 1s ease forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.navbar-links::after {
+  content: "";
+  display: block;
+  height: 0.08rem;
+  background-color: #000;
+  width: 90%;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 0;
+  animation: slideInFromRight 2s forwards;
+}

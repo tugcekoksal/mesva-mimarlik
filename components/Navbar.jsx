@@ -3,12 +3,17 @@ import { useRouter } from "next/router";
 import React from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import beyaz from "../public/logo/beyaz-logo.png";
+import siyah from "../public/logo/siyah-logo.png";
 
 const Navbar = () => {
   const router = useRouter();
   const [nav, setNav] = useState(false);
   const [color, setColor] = useState("transparent");
   const [textColor, setTextColor] = useState("white");
+  const [logo, setLogo] = useState(beyaz);
+  const [navLine, setNavLine] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
@@ -25,18 +30,27 @@ const Navbar = () => {
       if (window.scrollY >= 90) {
         setColor("white");
         setTextColor("black");
+        setLogo(siyah);
+        setNavLine(true);
       } else {
         setColor("transparent");
-        if (router.pathname === "/") {
+
+        if (router.pathname === "/" && window.scrollY <= 90) {
           setTextColor("white");
+          setLogo(beyaz);
+          setNavLine(false);
         }
       }
     };
 
     if (router.pathname === "/") {
       setTextColor("white");
+      setLogo(beyaz);
+      setNavLine(false);
     } else {
       setTextColor("black");
+      setLogo(siyah);
+      setNavLine(false);
     }
     window.addEventListener("scroll", changeColor);
 
@@ -52,13 +66,19 @@ const Navbar = () => {
     >
       <div className="max-w-[1240px] m-auto flex justify-between  items-center p-4 text-white">
         <Link href={"/"}>
-          {" "}
-          <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-            MesVA
-          </h1>
+          <Image
+            src={logo}
+            width={120}
+            height={50}
+            alt="logo"
+            className="mt-4"
+          ></Image>
         </Link>
 
-        <ul style={{ color: `${textColor} ` }} className="hidden sm:flex">
+        <ul
+          style={{ color: `${textColor} ` }}
+          className={`hidden sm:flex ${navLine ? "navbar-links" : ""}`}
+        >
           <li className={`p-4 ${getHoverColor()}`}>
             <Link href={"/"}>Ana Sayfa</Link>
           </li>
@@ -119,7 +139,6 @@ const Navbar = () => {
       </div>
     </section>
   );
-  x;
 };
 
 export default Navbar;
