@@ -30,7 +30,7 @@ const Servisler = () => {
       <div className="flex justify-center md:px-[18rem] py-10 ">
         {" "}
         <div
-          className={`flex-1 text-center px-8 py-2 border-r cursor-pointer ${
+          className={`flex-1 text-center px-4 py-2 border-r cursor-pointer ${
             visible1 ? "font-semibold" : ""
           }`}
           onClick={handleToggle1}
@@ -41,10 +41,10 @@ const Servisler = () => {
           >
             design_services
           </span>
-          <h2 className="text-sm"> RUHSAT VE UYGULAMA PROJELERİ</h2>
+          <h2 className="text-xs sm:text-sm"> RUHSAT VE UYGULAMA PROJELERİ</h2>
         </div>
         <div
-          className={`flex-1 text-center px-8 py-2 border-r cursor-pointer ${
+          className={`flex-1 text-center px-4 py-2 border-r cursor-pointer ${
             visible2 ? "font-semibold" : ""
           }`}
           onClick={handleToggle2}
@@ -55,10 +55,10 @@ const Servisler = () => {
           >
             stylus_note
           </span>
-          <h2 className="text-sm">İÇ MİMARLIK</h2>
+          <h2 className="text-xs sm:text-sm">İÇ MİMARLIK</h2>
         </div>
         <div
-          className={`flex-1 text-center px-8 py-2  cursor-pointer ${
+          className={`flex-1 text-center px-4 py-2  cursor-pointer ${
             visible3 ? "font-semibold" : ""
           }`}
           onClick={handleToggle3}
@@ -69,7 +69,7 @@ const Servisler = () => {
           >
             villa
           </span>
-          <h2 className="text-sm">KONSEPT TASARIM PROJELERİ</h2>
+          <h2 className="text-xs sm:text-sm">KONSEPT TASARIM PROJELERİ</h2>
         </div>
       </div>
       {visible1 && (

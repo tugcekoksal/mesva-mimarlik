@@ -6,7 +6,6 @@ const Hero = ({ heading, message }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
-
     const timeout = setTimeout(() => {
       setShowMessage(true);
     }, 400);
