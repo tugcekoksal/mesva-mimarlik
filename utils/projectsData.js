@@ -30,7 +30,7 @@ export const projects = [
   },
   {
     id: 2,
-    name: "F.K Evi",
+    name: "F.K EVİ",
     isveren: "F.K",
     konum: "Selçuklu, Konya",
     olcek: "300m²",

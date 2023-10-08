@@ -3,7 +3,14 @@ import { useState } from "react";
 import { BsArrowUpRightCircleFill } from "react-icons/bs";
 import Link from "next/link";
 
+import Modal from "@/components/Modal";
+
 const ImageGrid = ({ projects }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   const ImageItem = ({ src, name }) => (
     <div className="relative h-full w-full group overflow-hidden ">
       <img
@@ -17,12 +24,11 @@ const ImageGrid = ({ projects }) => {
       </div>
       <div className="absolute right-2 top-2">
         {" "}
-        <Link href={"/projeler"}>
-          <BsArrowUpRightCircleFill
-            className="text-white cursor-pointern opacity-0 group-hover:opacity-100 hover:text-black"
-            size={30}
-          />
-        </Link>
+        <BsArrowUpRightCircleFill
+          className="text-white cursor-pointern opacity-0 group-hover:opacity-100 hover:text-black"
+          size={30}
+          onClick={openModal}
+        />
       </div>
     </div>
   );
@@ -30,19 +36,24 @@ const ImageGrid = ({ projects }) => {
     <div className="w-full h-[700px] overflow-hidden grid grid-cols-2 md:flex  my-10">
       <div className="flex flex-col flex-1 p-2 sm:pl-0  ">
         <ImageItem src={projects[0].images[1]} name={projects[0].name} />
-        <ImageItem src={projects[2].images[3]} name={projects[0].name} />
+        <ImageItem src={projects[2].images[3]} name={projects[2].name} />
       </div>
       <div className="flex-1 p-2  ">
-        <ImageItem src={projects[1].images[1]} name={projects[2].name} />
+        <ImageItem src={projects[1].images[1]} name={projects[1].name} />
       </div>
 
       <div className="flex flex-col flex-1 p-2  ">
-        <ImageItem src={projects[4].images[7]} name={projects[3].name} />
-        <ImageItem src={projects[7].images[3]} name={projects[6].name} />
+        <ImageItem src={projects[4].images[7]} name={projects[4].name} />
+        <ImageItem src={projects[7].images[3]} name={projects[7].name} />
       </div>
       <div className="flex-1 p-2 sm:pr-0 ">
-        <ImageItem src={projects[6].images[0]} name={projects[5].name} />
+        <ImageItem src={projects[6].images[0]} name={projects[6].name} />
       </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        project={2}
+      />
     </div>
   );
 };
