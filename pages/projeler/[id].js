@@ -79,7 +79,7 @@ const ProjectDetailPage = () => {
       </Head>
       {false && <Navbar />}
 
-      <div className="fixed  bg-white w-full h-full flex items-center justify-center transition-opacity z-10">
+      <div className="relative py-10 bg-white w-full h-full flex items-center justify-center transition-opacity z-10 ">
         <Link href={"/projeler"} legacyBehavior>
           <a className="absolute right-10 top-4 text-black  text-2xl md:text-xl  cursor-pointer hover:font-semibold">
             X
