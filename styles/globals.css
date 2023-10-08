@@ -9,7 +9,7 @@ html {
 .custom-img {
   position: relative;
   background-image: url("/images/buyukcekmece-kentsel-donusum/4.jpg");
-  background-position: center center;
+  /* background-position: center center; */
 }
 .hakkinda-img {
   background-image: url("/images/beylikduzu-kuyumcu/2.jpg");
