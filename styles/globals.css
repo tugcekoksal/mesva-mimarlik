@@ -73,19 +73,3 @@ html {
   right: 0;
   animation: slideInFromRight 2s forwards;
 }
-
-.horizontal-line-container {
-  position: relative;
-}
-
-.horizontal-line-container::after {
-  content: "";
-  display: block;
-  border-top: 2px solid #ccc;
-  width: 100px;
-  margin: 0 auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 1rem;
-}

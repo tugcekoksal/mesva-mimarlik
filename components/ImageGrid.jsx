@@ -33,7 +33,7 @@ const ImageGrid = ({ projects }) => {
     </div>
   );
   return (
-    <div className="w-full h-[700px] overflow-hidden grid grid-cols-2 md:flex  my-10">
+    <div className="w-full h-[600px] overflow-hidden grid grid-cols-2 md:flex  my-10">
       <div className="flex flex-col flex-1 p-2 sm:pl-0  ">
         <ImageItem src={projects[0].images[1]} name={projects[0].name} />
         <ImageItem src={projects[2].images[3]} name={projects[2].name} />

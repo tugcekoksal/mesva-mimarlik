@@ -24,10 +24,10 @@ const Servisler = () => {
   };
   return (
     <div>
-      <h1 className="text-xl font-semibold text-center py-10 ">
+      <h1 className="text-xl font-semibold text-center sm:py-10 ">
         SERVİSLERİMİZ
       </h1>
-      <div className="flex justify-center md:px-[18rem] py-10 horizontal-line-container ">
+      <div className="flex justify-center lg:px-[14rem] py-10 sm:mb-6 ">
         {" "}
         <div
           className={`flex-1 text-center px-4 py-2 border-r cursor-pointer ${
@@ -73,7 +73,7 @@ const Servisler = () => {
         </div>
       </div>
       {visible1 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[14rem] mb-[5rem] ">
           <p className="text-center leading-loose">
             Mimari Vizyonunuzu Hayata Geçiriyoruz: Ruhsat ve Uygulama
             Projelerinizin Anahtar Teslim Çözüm Sağlayıcısı Olarak, Sizlere
@@ -87,7 +87,7 @@ const Servisler = () => {
         </div>
       )}
       {visible2 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[14rem] mb-[5rem]">
           <p className="text-center leading-loose">
             Mimari vizyonu gerçeğe dönüştürme konusundaki tutkumuzla, iç
             mekanlarınızı hayal ettiğinizden daha fazla özgün, işlevsel ve
@@ -99,10 +99,11 @@ const Servisler = () => {
         </div>
       )}
       {visible3 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[14rem] mb-[5rem]">
           <p className="text-center leading-loose">
             Her projeye özel yaklaşıyor ve müşterilerimizin ihtiyaçlarını ve
-            hayallerini en üst düzeyde karşılamak için çalışıyoruz.
+            hayallerini en üst düzeyde karşılamak için çalışıyoruz. Bizim için
+            her proje, yaratıcı bir zeka ve özgün bir vizyon gerektirir.
             <span className="font-semibold">
               <a href="/hakkinda"> Devamını gör...</a>
             </span>
