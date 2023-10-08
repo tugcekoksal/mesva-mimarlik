@@ -16,10 +16,10 @@ const Hero = ({ heading, message }) => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed  custom-img animate">
+    <div className="flex items-center justify-center h-screen mb-12 sm:bg-fixed  sm:bg-cover custom-img animate">
       {/*overlay*/}
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-[2]" />
-      <div className="p-5 text-white z-[2]  mt-[-10rem] ">
+      <div className="p-5 text-white z-[2]  ">
         {showMessage && (
           <div className="animate-slide-down">
             <h2 className="text-5xl font-bold">{heading}</h2>
