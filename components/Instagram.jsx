@@ -11,7 +11,7 @@ import img7 from "../public/instagram/7.png";
 import Instagramimg from "./Instagramimg";
 const Instagram = () => {
   return (
-    <div className="max-w-[1240px] mx-auto text-center py-24">
+    <div className="max-w-[1240px] mx-auto text-center  mb-16">
       <p className="text-2xl font-bold">Bizi Instagramdan takip edin</p>
 
       <p className="pb-4 ">@mesvamimarlik</p>
