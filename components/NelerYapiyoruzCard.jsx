@@ -3,7 +3,7 @@ function NelerYapiyoruz({ icon, title, description }) {
     fontSize: "3rem",
   };
   return (
-    <div className="card px-2 md:px-[50px] py-10 border rounded-lg shadow-lg text-center bg-white ">
+    <div className="card px-6 md:px-[50px] py-10 border rounded-lg shadow-lg text-center bg-white ">
       <span class="material-symbols-outlined mb-4 mx-auto " style={iconSize}>
         {icon}
       </span>
