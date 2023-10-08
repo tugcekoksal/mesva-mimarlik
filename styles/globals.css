@@ -7,9 +7,11 @@ html {
   font-family: "Raleway", sans-serif;
 }
 .custom-img {
-  /* position: relative; */
+  position: relative;
   background-image: url("/images/buyukcekmece-kentsel-donusum/4.jpg");
   background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .hakkinda-img {
   background-image: url("/images/beylikduzu-kuyumcu/2.jpg");
