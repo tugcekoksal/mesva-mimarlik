@@ -27,7 +27,7 @@ const Servisler = () => {
       <h1 className="text-xl font-semibold text-center py-10 ">
         SERVİSLERİMİZ
       </h1>
-      <div className="flex justify-center md:px-[18rem] py-10 ">
+      <div className="flex justify-center md:px-[18rem] py-10 horizontal-line-container ">
         {" "}
         <div
           className={`flex-1 text-center px-4 py-2 border-r cursor-pointer ${
@@ -87,7 +87,7 @@ const Servisler = () => {
         </div>
       )}
       {visible2 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
           <p className="text-center leading-loose">
             Mimari vizyonu gerçeğe dönüştürme konusundaki tutkumuzla, iç
             mekanlarınızı hayal ettiğinizden daha fazla özgün, işlevsel ve
@@ -99,7 +99,7 @@ const Servisler = () => {
         </div>
       )}
       {visible3 && (
-        <div className=" mx-[4rem] lg:mx-[10rem] my-[5rem]">
+        <div className=" mx-[4rem] lg:mx-[10rem] mb-[5rem]">
           <p className="text-center leading-loose">
             Her projeye özel yaklaşıyor ve müşterilerimizin ihtiyaçlarını ve
             hayallerini en üst düzeyde karşılamak için çalışıyoruz.

@@ -8,9 +8,8 @@ html {
 }
 .custom-img {
   position: relative;
-  background-image: url("/images/buyukcekmece-kentsel-donusum/4.jpg");
+  background-image: url("/images/buyukcekmece-kentsel-donusum/2.jpg");
   background-position: center center;
-
 }
 .hakkinda-img {
   background-image: url("/images/beylikduzu-kuyumcu/2.jpg");
@@ -73,4 +72,20 @@ html {
   bottom: 1.5rem;
   right: 0;
   animation: slideInFromRight 2s forwards;
+}
+
+.horizontal-line-container {
+  position: relative;
+}
+
+.horizontal-line-container::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #ccc;
+  width: 100px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
 }
