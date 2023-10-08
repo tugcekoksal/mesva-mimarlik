@@ -88,7 +88,7 @@ const ProjectDetailPage = () => {
 
         <div className="flex flex-col md:flex-row my-6 mx4 ">
           {" "}
-          <div className="relative w-[360px] md:w-[1000px] h-[400px] md:h-[650px] mb-9 sm:mb-0 ">
+          <div className="relative w-[360px] md:w-[1000px] h-[400px] md:h-[650px] my-10 sm:my-0 ">
             <Image
               src={selectedProject?.images?.[currentIndex]}
               alt={selectedProject.name}
