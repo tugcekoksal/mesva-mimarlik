@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectCard = ({ project, onDetailClick }) => {
+const ProjectCard = ({ project }) => {
   return (
     <div className="relative h-[300px] border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300 group transform hover:scale-105">
       <Image
@@ -18,12 +18,11 @@ const ProjectCard = ({ project, onDetailClick }) => {
         <p className="text-gray-300 mb-2">{project.Konum}</p>
         <p className="text-gray-400 mb-4">{project.Tip}</p>
 
-        <button
-          onClick={onDetailClick}
-          className="mt-4 inline-block bg-slate-50 text-black px-4 py-2 rounded hover:bg-slate-400  hover:text-white transition-colors duration-300"
-        >
-          Detaylar
-        </button>
+        <Link href={`/projeler/${project.id}`} legacyBehavior>
+          <a className="mt-4 inline-block bg-slate-50 text-black px-4 py-2 rounded hover:bg-slate-400  hover:text-white transition-colors duration-300">
+            Detaylar
+          </a>
+        </Link>
       </div>
     </div>
   );

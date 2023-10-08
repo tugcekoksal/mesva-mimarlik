@@ -65,7 +65,7 @@ const Modal = ({ isOpen, onClose, project }) => {
 
       <div
         onClick={handleModalClick}
-        className="fixed inset-0 bg-gray-500 bg-opacity-80 w-full h-full flex items-center justify-center z-50 transition-opacity"
+        className="fixed inset-0 bg-white bg-opacity-80 w-full h-full flex items-center justify-center z-50 transition-opacity"
       >
         <div
           onClick={handleContentClick}
@@ -85,7 +85,6 @@ const Modal = ({ isOpen, onClose, project }) => {
                 alt={project.name}
                 layout="fill"
                 objectFit="cover"
-                objectPosition="center"
                 placeholder="blur"
                 blurDataURL="data:image/png;base64,..."
               />

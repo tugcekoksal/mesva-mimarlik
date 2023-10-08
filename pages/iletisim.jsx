@@ -14,12 +14,10 @@ const iletisim = () => {
         {" "}
         <h1 className="text-2xl ">BİZE YAZIN...</h1>
       </div>
-      <div className="w-full h-full mr-8">
+      <div className="w-full h-full ">
         {/* Google Maps Gömme Kodu Buraya */}
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8032303870773!2d26.666204012866995!3d40.41320965573249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b16f4ea26c4601%3A0xc32397bd60099d27!2sMesva%20Mimarl%C4%B1k%20ve%20Tasar%C4%B1m%20Hizmetleri!5e0!3m2!1sen!2sfr!4v1695556879709!5m2!1sen!2sfr"
-          width="600"
-          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
