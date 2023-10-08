@@ -52,7 +52,6 @@ html {
 .group-hover .animate-slide-left {
   animation: slide-left 1s ease forwards;
 }
-
 @keyframes slideInFromRight {
   0% {
     width: 0%;
@@ -61,13 +60,23 @@ html {
     width: 75%;
   }
 }
+@media (max-width: 768px) {
+  @keyframes slideInFromRight {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 60%;
+    }
+  }
+}
 
 .navbar-links::after {
   content: "";
   display: block;
   height: 0.08rem;
   background-color: #000;
-  width: 90%;
+
   position: absolute;
   bottom: 1.5rem;
   right: 0;
