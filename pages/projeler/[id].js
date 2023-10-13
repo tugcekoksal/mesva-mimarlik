@@ -91,12 +91,12 @@ const ProjectDetailPage = () => {
             <AiOutlineFullscreen />
           </button>
         </Link> */}
-        {isFullScreen && (
+        {/* {isFullScreen && (
           <FullScreenImage
             imageUrl={selectedProject?.images?.[currentIndex]}
             onClose={closeFullScreen}
           />
-        )}
+        )} */}
 
         <div className="flex flex-col md:flex-row my-6 mx4 ">
           {" "}
