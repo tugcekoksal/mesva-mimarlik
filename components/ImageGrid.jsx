@@ -12,7 +12,7 @@ const ImageGrid = ({ projects }) => {
       />
 
       <div className="absolute bottom-4 w-full h-[4rem] flex items-center bg-slate-600/70 justify-center opacity-0 group-hover:opacity-100  duration-300  group-hover:animate-slide-left  ">
-        <p className="text-white text-center text-lg mr-4">{`${name}   `}</p>
+        <p className="text-white text-center text-lg ">{`${name}   `}</p>
       </div>
       <div className="absolute right-2 top-2">
         <Link href={`/projeler/${project}`}>
