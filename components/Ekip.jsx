@@ -3,10 +3,10 @@ import EkipCard from "./EkipCard";
 const Ekip = () => {
   return (
     <div className="flex flex-col mx-auto mb-10">
-      <h1 className="container mx-auto text-center text-xl font-semibold uppercase">
+      <h1 className="container mx-auto text-center text-xl font-semibold uppercase mb-10">
         Ekibimiz
       </h1>
-      <div className="container  flex flex-wrap mx-auto my-8 justify-center filter grayscale">
+      <div className="container  flex flex-wrap mx-auto sm:mb-8 justify-center filter grayscale ">
         <EkipCard
           isim={"Sinem Çeri"}
           unvan={"Kurucu Mimar"}
@@ -26,7 +26,7 @@ const Ekip = () => {
           baseUrl={"/ekip/merve.jpeg"}
         />
       </div>
-      <div className="container  flex flex-wrap mx-auto my-8 justify-center filter grayscale">
+      <div className="container  flex flex-wrap mx-auto mb-8 justify-center filter grayscale">
         <EkipCard
           isim={"Esra Misafir"}
           unvan={"Mimar"}
