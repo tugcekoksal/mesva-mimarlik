@@ -11,7 +11,7 @@ function Footer() {
           <a href="#" className="hover:text-gray-400">
             Anasayfa
           </a>
-          <a href="/" className="hover:text-gray-400">
+          <a href="/hakkinda" className="hover:text-gray-400">
             Hakkımızda
           </a>
           <Link href="/iletisim" className="hover:text-gray-400">

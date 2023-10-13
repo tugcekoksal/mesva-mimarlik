@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NelerYapiyoruz from "@/components/NelerYapiyoruzCard";
 import React, { useEffect, useRef, useState } from "react";
-import { FaBuilding, FaPaintBrush, FaDraftingCompass } from "react-icons/fa";
+import Ekip from "@/components/Ekip";
 
 const hakkinda = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,6 +58,7 @@ const hakkinda = () => {
           </p>
         </div>
       </div>
+
       <div className="flex items-center justify-center  lg:h-[500px]  bg-center bg-cover hakkinda-img mb-[100px] md:mb-[250px]">
         <div className=" lg:mt-[400px] container mx-auto p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
           {" "}
@@ -82,6 +83,9 @@ const hakkinda = () => {
           />
         </div>
       </div>
+
+      <Ekip />
+
       <div className="flex justify-center pb-10 ">
         <Link href={"/iletisim"}>
           <button

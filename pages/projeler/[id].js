@@ -6,18 +6,31 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import { AiOutlineFullscreen } from "react-icons/ai";
+import FullScreenImage from "@/components/FullScreen";
 
 const ProjectDetailPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const projectId = parseInt(id, 10);
   const selectedProject = projects.find((project) => project.id === projectId);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openFullScreen = (e) => {
+    e.preventDefault();
+    setIsFullScreen(true);
+    console.log("acildi");
+  };
+  const closeFullScreen = () => {
+    setIsFullScreen(false);
+    console.log("kapandi");
+  };
 
   if (!selectedProject) {
     return <p>Proje bulunamadı.</p>;
   }
 
-  const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "ArrowRight") {
@@ -49,21 +62,6 @@ const ProjectDetailPage = () => {
         selectedProject.images.length
     );
   };
-  const handleModalClick = (e) => {
-    e.stopPropagation();
-    setCurrentIndex(0);
-    onClose();
-    console.log(currentIndex);
-  };
-
-  const handleContentClick = (e) => {
-    e.stopPropagation();
-  };
-  const handleClose = () => {
-    setCurrentIndex(0);
-    onClose();
-    console.log(currentIndex);
-  };
 
   return (
     <>
@@ -81,10 +79,24 @@ const ProjectDetailPage = () => {
 
       <div className="relative py-10 bg-white w-full h-full flex items-center justify-center transition-opacity z-10 ">
         <Link href={"/projeler"} legacyBehavior>
-          <a className="absolute right-10 top-4 text-black  text-2xl md:text-xl  cursor-pointer hover:font-semibold">
+          <a className="absolute right-10 top-4 text-black text-2xl md:text-xl  cursor-pointer hover:font-semibold">
             X
           </a>
         </Link>
+        <Link href={"/projeler"} legacyBehavior>
+          <button
+            className="absolute left-10 top-4 text-black font-bold  text-2xl md:text-xl   hover:font-semibold z-[20]"
+            onClick={openFullScreen}
+          >
+            <AiOutlineFullscreen />
+          </button>
+        </Link>
+        {isFullScreen && (
+          <FullScreenImage
+            imageUrl={selectedProject?.images?.[currentIndex]}
+            onClose={closeFullScreen}
+          />
+        )}
 
         <div className="flex flex-col md:flex-row my-6 mx4 ">
           {" "}
@@ -129,26 +141,5 @@ const ProjectDetailPage = () => {
     </>
   );
 };
-
-//   return (
-//     <div>
-//       <h1>Proje Detay Sayfası - {selectedProject.name}</h1>
-//       {/* Proje detaylarını göstermek için gerekli bileşenleri ekleyin */}
-//       <p>Proje ID: {selectedProject.id}</p>
-//       <p>Proje Açıklaması: {selectedProject.ekip}</p>
-//       {/* Diğer proje detaylarını burada gösterin */}
-//     </div>
-//   );
-// };
-// export async function getStaticProps({ params }) {
-//   const projectId = params.id;
-//   const projectData = projects.find((project) => project.id === projectId);
-
-//   return {
-//     props: {
-//       projectData,
-//     },
-//   };
-// }
 
 export default ProjectDetailPage;

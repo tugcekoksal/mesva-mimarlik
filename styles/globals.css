@@ -11,6 +11,9 @@ html {
   background-image: url("/images/buyukcekmece-kentsel-donusum/2.jpg");
   background-position: center center;
 }
+.cursor-autocad {
+  cursor: url("/public/clicks.png"), auto;
+}
 .hakkinda-img {
   background-image: url("/images/beylikduzu-kuyumcu/2.jpg");
 }
@@ -81,4 +84,15 @@ html {
   bottom: 1.5rem;
   right: 0;
   animation: slideInFromRight 2s forwards;
+}
+
+.ekip-yazi {
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+  transform: translateY(50px);
+}
+
+.ekip-yazi:hover {
+  opacity: 1;
+  transform: translateY(0);
 }

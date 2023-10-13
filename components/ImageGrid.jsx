@@ -32,7 +32,11 @@ const ImageGrid = ({ projects }) => {
           name={projects[0].name}
           project={projects[0].id}
         />
-        <ImageItem src={projects[2].images[3]} name={projects[2].name} />
+        <ImageItem
+          src={projects[2].images[3]}
+          name={projects[2].name}
+          project={projects[1].id}
+        />
       </div>
       <div className="flex-1 p-1  ">
         <ImageItem

@@ -79,16 +79,32 @@ const Navbar = () => {
           style={{ color: `${textColor} ` }}
           className={`hidden sm:flex ${navLine ? "navbar-links" : ""}`}
         >
-          <li className={`p-4 ${getHoverColor()}`}>
+          <li
+            className={`p-4 ${getHoverColor()} ${
+              router.pathname === "/" ? "font-semibold" : ""
+            }`}
+          >
             <Link href={"/"}>Ana Sayfa</Link>
           </li>
-          <li className={`p-4 ${getHoverColor()}`}>
-            <Link href={"/hakkinda"}>Ne Yapıyoruz</Link>
+          <li
+            className={`p-4 ${getHoverColor()} ${
+              router.pathname === "/hakkinda" ? "font-semibold" : ""
+            }`}
+          >
+            <Link href={"/hakkinda"}>Biz Kimiz ?</Link>
           </li>
-          <li className={`p-4 ${getHoverColor()}`}>
+          <li
+            className={`p-4 ${getHoverColor()} ${
+              router.pathname === "/projeler" ? "font-semibold" : ""
+            }`}
+          >
             <Link href={"/projeler"}>Projeler</Link>
           </li>
-          <li className={`p-4 ${getHoverColor()}`}>
+          <li
+            className={`p-4 ${getHoverColor()} ${
+              router.pathname === "/iletisim" ? "font-semibold" : ""
+            }`}
+          >
             <Link href={"/iletisim"}>İletişim</Link>
           </li>
         </ul>
@@ -123,7 +139,7 @@ const Navbar = () => {
               className="p-4 text-4xl hover:text-gray-500"
             >
               {" "}
-              <Link href={"/hakkinda"}>Ne Yapıyoruz</Link>
+              <Link href={"/hakkinda"}>Biz Kimiz ?</Link>
             </li>
             <li
               onClick={handleNav}
