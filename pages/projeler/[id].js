@@ -17,15 +17,15 @@ const ProjectDetailPage = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const openFullScreen = (e) => {
-  //   e.preventDefault();
-  //   setIsFullScreen(true);
-  //   console.log("acildi");
-  // };
-  // const closeFullScreen = () => {
-  //   setIsFullScreen(false);
-  //   console.log("kapandi");
-  // };
+  const openFullScreen = (e) => {
+    e.preventDefault();
+    setIsFullScreen(true);
+    console.log("acildi");
+  };
+  const closeFullScreen = () => {
+    setIsFullScreen(false);
+    console.log("kapandi");
+  };
 
   if (!selectedProject) {
     return <p>Proje bulunamadı.</p>;
@@ -83,20 +83,20 @@ const ProjectDetailPage = () => {
             X
           </a>
         </Link>
-        {/* <Link href={"/projeler"} legacyBehavior>
+        <Link href={"/projeler"} legacyBehavior>
           <button
             className="absolute left-10 top-4 text-black font-bold  text-2xl md:text-xl   hover:font-semibold z-[20]"
             onClick={openFullScreen}
           >
             <AiOutlineFullscreen />
           </button>
-        </Link> */}
-        {/* {isFullScreen && (
+        </Link>
+        {isFullScreen && (
           <FullScreenImage
             imageUrl={selectedProject?.images?.[currentIndex]}
             onClose={closeFullScreen}
           />
-        )} */}
+        )}
 
         <div className="flex flex-col md:flex-row my-6 mx4 ">
           {" "}
