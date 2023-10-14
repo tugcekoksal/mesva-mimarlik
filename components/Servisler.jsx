@@ -93,7 +93,7 @@ const Servisler = () => {
             mekanlarınızı hayal ettiğinizden daha fazla özgün, işlevsel ve
             estetik olarak tasarlamak için buradayız.
             <span className="font-semibold">
-              <a href="/hakkinda">Devamını gör...</a>
+              <a href="/hakkinda"> Devamını gör...</a>
             </span>
           </p>
         </div>

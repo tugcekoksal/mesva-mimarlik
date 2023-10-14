@@ -2,7 +2,7 @@ import EkipCard from "./EkipCard";
 
 const Ekip = () => {
   return (
-    <div className="flex flex-col mx-auto mb-10">
+    <div className="flex flex-col mx-auto mb-10 mt-[300px]">
       <h1 className="container mx-auto text-center text-xl font-semibold uppercase mb-10">
         Ekibimiz
       </h1>
