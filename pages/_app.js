@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head key={"head"}>
-        <title>MesVA Mimarlik</title>
+        <title>Mesva Mimarlik</title>
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"

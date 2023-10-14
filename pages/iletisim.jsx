@@ -67,7 +67,7 @@ const iletisim = () => {
             telefon={"      0530 286 82 71"}
             ilce={"Selçuklu/Konya"}
             url={"/konya.jpeg"}
-            harita={"https://maps.app.goo.gl/SVDrskAgVR6kXY7m8"}
+            harita={"https://maps.app.goo.gl/rSYTfFcsNGwthRd79"}
           />
         </div>
       </div>
