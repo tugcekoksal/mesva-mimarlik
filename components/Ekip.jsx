@@ -31,7 +31,7 @@ const Ekip = () => {
           isim={"Esra Misafir"}
           unvan={"Mimar"}
           okul={"Erciyes Üniversitesi "}
-          baseUrl={"/ekip/avatar.jpeg"}
+          baseUrl={"/ekip/esra.jpg"}
         />
         <EkipCard
           isim={"Soner Çeri"}

@@ -260,6 +260,8 @@ export const projects = [
       "/images/buyukcekmece-kentsel-donusum/2.jpg",
       "/images/buyukcekmece-kentsel-donusum/3.jpg",
       "/images/buyukcekmece-kentsel-donusum/4.jpg",
+      "/images/buyukcekmece-kentsel-donusum/5.jpg",
+      "/images/buyukcekmece-kentsel-donusum/6.jpg",
     ],
   },
 ];
