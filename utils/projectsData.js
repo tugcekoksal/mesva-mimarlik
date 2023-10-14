@@ -135,6 +135,7 @@ export const projects = [
     olcek: "400m²",
     tarih: 2022,
     tip: "Konut",
+    durum: "Konsept+Ruhsat",
     ekip: "Mesva Mimarlık",
     images: [
       "/images/konya-mustakil-ev/1.jpg",
@@ -248,11 +249,11 @@ export const projects = [
     id: 11,
     name: "BÜYÜKÇEKMECE KENTSEL DÖNÜŞÜM",
     isveren: "Seçer Yapı",
-    konum: "Gelibolu, Çanakkale",
-    olcek: "1600m²",
+    konum: "Büyükçekmece, İstanbul",
+    olcek: "5820m²",
     tarih: 2023,
-    tip: "Konut",
-    durum: "Konsept, Ruhsat, Uygulama",
+    tip: "Konut+Ticaret",
+    durum: "Konsept",
     ekip: "Mesva Mimarlık",
     images: [
       "/images/buyukcekmece-kentsel-donusum/1.jpg",
