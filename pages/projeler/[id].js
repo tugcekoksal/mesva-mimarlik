@@ -105,7 +105,7 @@ const ProjectDetailPage = () => {
             />
             <Link href={"/projeler"} legacyBehavior>
               <button
-                className="absolute left-5 top-4 text-white font-bold  text-3xl md:text-xl   hover:font-bold z-[20]"
+                className="absolute left-5 top-4 text-black  font-bold  text-3xl md:text-xl   hover:font-bold z-[20]"
                 onClick={openFullScreen}
               >
                 <AiOutlineFullscreen />
