@@ -20,11 +20,9 @@ const ProjectDetailPage = () => {
   const openFullScreen = (e) => {
     e.preventDefault();
     setIsFullScreen(true);
-    console.log("acildi");
   };
   const closeFullScreen = () => {
     setIsFullScreen(false);
-    console.log("kapandi");
   };
 
   if (!selectedProject) {
@@ -83,24 +81,19 @@ const ProjectDetailPage = () => {
             X
           </a>
         </Link>
-        <Link href={"/projeler"} legacyBehavior>
-          <button
-            className="absolute left-10 top-4 text-black font-bold  text-2xl md:text-xl   hover:font-semibold z-[20]"
-            onClick={openFullScreen}
-          >
-            <AiOutlineFullscreen />
-          </button>
-        </Link>
+
         {isFullScreen && (
           <FullScreenImage
             imageUrl={selectedProject?.images?.[currentIndex]}
             onClose={closeFullScreen}
+            nextImage={nextImage}
+            prevImage={prevImage}
           />
         )}
 
-        <div className="flex flex-col md:flex-row my-6 mx4 ">
+        <div className="flex flex-col md:flex-row my-6  ">
           {" "}
-          <div className="relative w-[360px] md:w-[1000px] h-[400px] md:h-[650px] my-10 sm:my-0 ">
+          <div className="relative w-[360px] md:w-[1000px] h-[300px] md:h-[650px] my-10 sm:my-0 ">
             <Image
               src={selectedProject?.images?.[currentIndex]}
               alt={selectedProject.name}
@@ -110,6 +103,14 @@ const ProjectDetailPage = () => {
               placeholder="blur"
               blurDataURL="data:image/png;base64,..."
             />
+            <Link href={"/projeler"} legacyBehavior>
+              <button
+                className="absolute left-5 top-4 text-white font-bold  text-3xl md:text-xl   hover:font-bold z-[20]"
+                onClick={openFullScreen}
+              >
+                <AiOutlineFullscreen />
+              </button>
+            </Link>
             <button
               className="absolute text-4xl text-white hover:text-5xl top-1/2 left-2 transform -translate-y-1/2"
               onClick={prevImage}
