@@ -244,4 +244,21 @@ export const projects = [
       "/images/secer-yapi-konut-projesi/5.jpg",
     ],
   },
+  {
+    id: 11,
+    name: "BÜYÜKÇEKMECE KENTSEL DÖNÜŞÜM",
+    isveren: "Seçer Yapı",
+    konum: "Gelibolu, Çanakkale",
+    olcek: "1600m²",
+    tarih: 2023,
+    tip: "Konut",
+    durum: "Konsept, Ruhsat, Uygulama",
+    ekip: "Mesva Mimarlık",
+    images: [
+      "/images/buyukcekmece-kentsel-donusum/1.jpg",
+      "/images/buyukcekmece-kentsel-donusum/2.jpg",
+      "/images/buyukcekmece-kentsel-donusum/3.jpg",
+      "/images/buyukcekmece-kentsel-donusum/4.jpg",
+    ],
+  },
 ];
