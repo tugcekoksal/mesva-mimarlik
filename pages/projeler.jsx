@@ -1,7 +1,6 @@
 import React from "react";
 import { projects } from "@/utils/projectsData";
 import ProjectCard from "@/components/ProjectCard";
-import { useState } from "react";
 
 const projeler = () => {
   return (
