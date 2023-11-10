@@ -8,10 +8,8 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import FullScreenImage from "@/components/FullScreen";
-import { RiseLoader } from "react-spinners";
 
 const ProjectDetailPage = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const router = useRouter();
@@ -96,11 +94,6 @@ const ProjectDetailPage = () => {
         <div className="flex flex-col md:flex-row my-6  ">
           {" "}
           <div className="relative w-[360px] md:w-[1000px] h-[300px] md:h-[650px] my-10 sm:my-0 ">
-            {!imageLoaded && (
-              <div className="absolute z-[999] inset-0 flex items-center justify-center">
-                <RiseLoader color="#c5c5c5" />
-              </div>
-            )}
             <Image
               src={selectedProject?.images?.[currentIndex]}
               alt={selectedProject.name}

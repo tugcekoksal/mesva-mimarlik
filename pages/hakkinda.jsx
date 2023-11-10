@@ -60,7 +60,7 @@ const hakkinda = () => {
       </div>
 
       <div className="flex items-center justify-center  lg:h-[500px]  bg-center bg-cover hakkinda-img mb-[100px] md:mb-[250px]">
-        <div className=" lg:mt-[400px] container mx-[10rem] p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
+        <div className=" lg:mt-[400px] container mx-[1rem] md:mx-[15rem] lg:mx-[5rem] p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
           {" "}
           <NelerYapiyoruz
             icon={"design_services"}
