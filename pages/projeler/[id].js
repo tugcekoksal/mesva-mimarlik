@@ -102,7 +102,6 @@ const ProjectDetailPage = () => {
               objectPosition="center"
               placeholder="blur"
               blurDataURL="data:image/png;base64,..."
-              onLoad={() => setImageLoaded(true)}
             />
             <Link href={"/projeler"} legacyBehavior>
               <button
