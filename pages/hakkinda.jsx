@@ -60,7 +60,7 @@ const hakkinda = () => {
       </div>
 
       <div className="flex items-center justify-center  lg:h-[500px]  bg-center bg-cover hakkinda-img mb-[100px] md:mb-[250px]">
-        <div className=" lg:mt-[400px] container mx-auto p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
+        <div className=" lg:mt-[400px] container mx-[10rem] p-10   grid grid-cols-1  lg:grid-cols-3 gap-6  ">
           {" "}
           <NelerYapiyoruz
             icon={"design_services"}
@@ -90,7 +90,7 @@ const hakkinda = () => {
         <Link href={"/iletisim"}>
           <button
             ref={buttonRef}
-            className={`border border-black shadow py-4 px-10 rounded font-semibold hover:bg-black hover:text-white transform transition-all duration-500  ${
+            className={`border border-black shadow py-4 px-10  font-semibold hover:bg-black hover:text-white transform transition-all duration-500  ${
               isVisible ? "translate-y-[-50px]" : ""
             }`}
           >

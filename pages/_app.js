@@ -4,6 +4,8 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import ScrollToTop from "@/components/ScrollToUp";
 
+import Loading from "@/components/Loading";
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -20,6 +22,7 @@ export default function App({ Component, pageProps }) {
       <ScrollToTop />
       <Component {...pageProps} />
       <Footer />
+      <Loading />
     </>
   );
 }

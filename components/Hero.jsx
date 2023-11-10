@@ -2,8 +2,10 @@ import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
 
+
 const Hero = ({ heading, message }) => {
   const [showMessage, setShowMessage] = useState(false);
+ 
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -18,6 +20,7 @@ const Hero = ({ heading, message }) => {
   return (
     <div className="flex items-center justify-center h-screen mb-16 sm:bg-fixed  bg-cover custom-img animate">
       {/*overlay*/}
+
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/60 z-[2]" />
       <div className="p-6 w-[700px] text-white z-[2]  ">
         {showMessage && (

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="relative  h-[300px] border rounded-md overflow-hidden shadow-md hover:shadow-lg transition duration-300 group transform hover:scale-105">
+    <div className="relative  h-[300px] border  overflow-hidden shadow-md hover:shadow-lg transition duration-300 group transform hover:scale-105">
       <Image
         src={project.images[0]}
         alt={project.name}

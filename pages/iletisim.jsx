@@ -29,7 +29,6 @@ const iletisim = () => {
           loading="lazy"
         ></iframe>
       </div>
-
       <div className="my-10 text-center">
         {" "}
         <p className="p-6 text-light">
@@ -71,7 +70,6 @@ const iletisim = () => {
           />
         </div>
       </div>
-
       <div className="bg-gray-100 shadow-lg flex flex-col  items-center justify-center py-16  w-full">
         <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
           MESAJINIZI BIRAKABİLİRSİNİZ
